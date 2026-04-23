@@ -67,6 +67,7 @@
             this.btnCargar.TabIndex = 8;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // lblDeuda
             // 
@@ -139,6 +140,7 @@
             this.ClientSize = new System.Drawing.Size(523, 272);
             this.Controls.Add(this.gboCargaDatos);
             this.Name = "frmCargarClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCargarClientes";
             this.gboCargaDatos.ResumeLayout(false);
             this.gboCargaDatos.PerformLayout();

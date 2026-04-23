@@ -22,5 +22,11 @@ namespace pryGestionClientesCSVBenjaminDiaz
             Form formulario = new frmCargarClientes();
             formulario.Show();
         }
+
+        private void listadoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new frmListadoClientes();
+            formulario.Show();
+        }
     }
 }

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsArchivoClientes.cs" />
     <Compile Include="frmCargarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +59,12 @@
     <Compile Include="frmGestorClientesCSV.Designer.cs">
       <DependentUpon>frmGestorClientesCSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListadoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoClientes.Designer.cs">
+      <DependentUpon>frmListadoClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCargarClientes.resx">
@@ -65,6 +72,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestorClientesCSV.resx">
       <DependentUpon>frmGestorClientesCSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoClientes.resx">
+      <DependentUpon>frmListadoClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -7,22 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace pryGestionClientesCSVBenjaminDiaz
 {
-    public partial class frmCargarClientes : Form
+    public partial class frmListadoClientes : Form
     {
-        public frmCargarClientes()
+        public frmListadoClientes()
         {
             InitializeComponent();
         }
         clsArchivoClientes x = new clsArchivoClientes();
 
-        private void btnCargar_Click(object sender, EventArgs e)
+        private void frmListadoClientes_Load(object sender, EventArgs e)
         {
-            x.Grabar(txtCodigo.Text, txtNombreyApellido.Text, txtDeuda.Text, txtLimite.Text);
-            MessageBox.Show("Datos Grabados");
+            x.Listar(dgvDatos);
+
         }
     }
 }
