@@ -1,6 +1,6 @@
 ﻿namespace pryGestionClientesCSVBenjaminDiaz
 {
-    partial class frmListadoClientes
+    partial class frmClientesDeudores
     {
         /// <summary>
         /// Required designer variable.
@@ -47,17 +47,17 @@
             this.gboConsultaDatos.Controls.Add(this.lblCantidadClientes);
             this.gboConsultaDatos.Controls.Add(this.lblTotalDeuda);
             this.gboConsultaDatos.Controls.Add(this.dgvDatos);
-            this.gboConsultaDatos.Location = new System.Drawing.Point(27, 22);
+            this.gboConsultaDatos.Location = new System.Drawing.Point(48, -21);
             this.gboConsultaDatos.Name = "gboConsultaDatos";
             this.gboConsultaDatos.Size = new System.Drawing.Size(463, 493);
-            this.gboConsultaDatos.TabIndex = 1;
+            this.gboConsultaDatos.TabIndex = 2;
             this.gboConsultaDatos.TabStop = false;
             this.gboConsultaDatos.Text = "Consulta de Datos";
             // 
             // lblPromedioDeuda
             // 
             this.lblPromedioDeuda.AutoSize = true;
-            this.lblPromedioDeuda.Location = new System.Drawing.Point(335, 449);
+            this.lblPromedioDeuda.Location = new System.Drawing.Point(332, 442);
             this.lblPromedioDeuda.Name = "lblPromedioDeuda";
             this.lblPromedioDeuda.Size = new System.Drawing.Size(104, 13);
             this.lblPromedioDeuda.TabIndex = 3;
@@ -89,7 +89,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvDatos.Location = new System.Drawing.Point(6, 29);
+            this.dgvDatos.Location = new System.Drawing.Point(6, 33);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.Size = new System.Drawing.Size(429, 301);
             this.dgvDatos.TabIndex = 0;
@@ -114,16 +114,15 @@
             this.Column4.HeaderText = "Deuda";
             this.Column4.Name = "Column4";
             // 
-            // frmListadoClientes
+            // frmClientesDeudores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 527);
+            this.ClientSize = new System.Drawing.Size(534, 478);
             this.Controls.Add(this.gboConsultaDatos);
-            this.Name = "frmListadoClientes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmListadoClientes";
-            this.Load += new System.EventHandler(this.frmListadoClientes_Load);
+            this.Name = "frmClientesDeudores";
+            this.Text = "frmClientesDeudores";
+            this.Load += new System.EventHandler(this.frmClientesDeudores_Load);
             this.gboConsultaDatos.ResumeLayout(false);
             this.gboConsultaDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();

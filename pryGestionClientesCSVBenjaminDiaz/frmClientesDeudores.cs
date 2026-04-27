@@ -10,21 +10,19 @@ using System.Windows.Forms;
 
 namespace pryGestionClientesCSVBenjaminDiaz
 {
-    public partial class frmListadoClientes : Form
+    public partial class frmClientesDeudores : Form
     {
-        public frmListadoClientes()
+        public frmClientesDeudores()
         {
             InitializeComponent();
         }
         clsArchivoClientes x = new clsArchivoClientes();
-
-        private void frmListadoClientes_Load(object sender, EventArgs e)
+        private void frmClientesDeudores_Load(object sender, EventArgs e)
         {
-            x.Listar(dgvDatos);
+            x.ListarDeudores(dgvDatos);
             lblCantidadClientes.Text = x.CantidadClientes().ToString();
             lblTotalDeuda.Text = x.DeudaClientes().ToString();
             lblPromedioDeuda.Text = x.PromedioDeudad().ToString();
-
         }
     }
 }
