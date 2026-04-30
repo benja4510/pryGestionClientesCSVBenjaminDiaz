@@ -165,8 +165,8 @@ namespace pryGestionClientesCSVBenjaminDiaz
                 //Separar los datos     
                 VecDatos = DatosLeidos.Split(';');
 
-                
-                if (Convert.ToUInt32(VecDatos[2])> 0) 
+
+                if (Convert.ToUInt32(VecDatos[2]) > 0)
                 {
                     Grilla.Rows.Add(VecDatos[0], VecDatos[1], VecDatos[2], VecDatos[3]);
 
@@ -179,6 +179,65 @@ namespace pryGestionClientesCSVBenjaminDiaz
             //Cerrar
             AD.Close();
             AD.Dispose();
+        }
+        public void GenerarReporte()
+        {
+            string DatosLeidos;
+            string[] VecDatos = new string[4];
+
+            Int32 cantidad= 0;
+            Decimal total = 0; 
+
+            StreamWriter Reporte = new StreamWriter("Reporte.csv",false,Encoding.UTF8);
+
+            Reporte.WriteLine("Listado de Clientes");
+            Reporte.WriteLine("");
+            Reporte.WriteLine("Codigo;Nombre;Deuda;Limite");
+
+
+            //Abrir
+            StreamReader AD = new StreamReader(NombreArchivo);
+
+            //Cargar o leer
+            DatosLeidos = AD.ReadLine();
+          
+           
+            while (DatosLeidos != null)
+            {
+                //Separar los datos     
+                VecDatos = DatosLeidos.Split(';');
+
+                Reporte.Write(VecDatos[0]);
+                Reporte.Write(";");
+                Reporte.Write(VecDatos[1]);
+                Reporte.Write(";");
+                Reporte.Write(VecDatos[3]);
+                Reporte.Write(";");
+                Reporte.WriteLine(VecDatos[2]);
+
+
+
+                // Agregar a la grilla
+                DatosLeidos = AD.ReadLine();
+                //contador
+                cantidad++;
+                //suma
+                total = total + Convert.ToDecimal(VecDatos[2]);
+            }
+
+            //Cerrar
+            AD.Close();
+            AD.Dispose();
+            Reporte.WriteLine("");
+            Reporte.Write("Total Deuda:;;");
+            Reporte.WriteLine(total);
+            Reporte.Write("Cantidad de Clientes:;;");
+            Reporte.WriteLine(cantidad);
+            Reporte.Write("Promedio de Deuda:;;");
+            Reporte.WriteLine(total/cantidad);
+
+            Reporte.Close();
+            Reporte.Dispose();
         }
     }
 }

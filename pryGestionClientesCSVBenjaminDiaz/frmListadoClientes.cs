@@ -26,5 +26,13 @@ namespace pryGestionClientesCSVBenjaminDiaz
             lblPromedioDeuda.Text = x.PromedioDeudad().ToString();
 
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            x.GenerarReporte();
+            MessageBox.Show("Reporte generado correctamente", "Reporte", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+       
     }
 }

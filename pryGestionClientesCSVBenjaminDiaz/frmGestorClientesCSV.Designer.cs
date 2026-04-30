@@ -125,6 +125,7 @@
             this.ClientSize = new System.Drawing.Size(555, 450);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmGestorClientesCSV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGestorClientesCSV";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
