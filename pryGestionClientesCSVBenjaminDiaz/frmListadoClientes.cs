@@ -33,6 +33,11 @@ namespace pryGestionClientesCSVBenjaminDiaz
             MessageBox.Show("Reporte generado correctamente", "Reporte", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-       
+        private void btnOrdenar_Click(object sender, EventArgs e)
+        {
+            x.OrdenarArchivo();
+            MessageBox.Show("Archivo ordenado correctamente", "Ordenar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            x.Listar(dgvDatos);
+        }
     }
 }

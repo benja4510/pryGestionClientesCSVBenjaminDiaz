@@ -41,12 +41,14 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnOrdenar = new System.Windows.Forms.Button();
             this.gboConsultaDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // gboConsultaDatos
             // 
+            this.gboConsultaDatos.Controls.Add(this.btnOrdenar);
             this.gboConsultaDatos.Controls.Add(this.label3);
             this.gboConsultaDatos.Controls.Add(this.label2);
             this.gboConsultaDatos.Controls.Add(this.label1);
@@ -157,6 +159,16 @@
             this.Column4.HeaderText = "Deuda";
             this.Column4.Name = "Column4";
             // 
+            // btnOrdenar
+            // 
+            this.btnOrdenar.Location = new System.Drawing.Point(32, 378);
+            this.btnOrdenar.Name = "btnOrdenar";
+            this.btnOrdenar.Size = new System.Drawing.Size(105, 34);
+            this.btnOrdenar.TabIndex = 2;
+            this.btnOrdenar.Text = "Ordenar";
+            this.btnOrdenar.UseVisualStyleBackColor = true;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
+            // 
             // frmListadoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,5 +201,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPromedioDeuda;
+        private System.Windows.Forms.Button btnOrdenar;
     }
 }
