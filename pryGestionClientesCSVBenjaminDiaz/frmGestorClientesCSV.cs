@@ -34,5 +34,22 @@ namespace pryGestionClientesCSVBenjaminDiaz
             Form formulario = new frmClientesDeudores();
             formulario.Show();
         }
+
+        private void listadoDeClientesOrdenadosPorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new frmListadoClientes();
+            formulario.Show();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new frmDatosDelDesarrollador();
+            formulario.Show();
+        }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
